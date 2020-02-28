@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Eleventy Blog</title>
+	<script type="text/x-mathjax-config">
+    	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<link rel="stylesheet" href="https://ds604.neocities.org/js/latexTypeset/examples/flatland/flatland-single.css"/>
+	<link rel="stylesheet" href="/css/syntax.css" />
+	<style>
+	body {
+	 	/*font-family: "Lato", sans-serif;*/
+	 	font-family: "Minion Pro", Gentium, "Gentium Basic", "Hoefler Text", Constantia, "Palatino Linotype", Georgia, serif;
+	 	background-color: #171717;
+    	color: lightgray;
+	}
+
+	a {
+		color: lightblue;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #f1f1f1;
+	}
+
+	/*article {
+		line-height: 1.3em;
+	}*/
+
+	hr { 
+		height: 10px;
+		border: 0;
+		box-shadow: 0 1px 1px -1px #8c8b8b inset;
+		width: 50%;
+	}
+
+	footer { 
+		background-image: url("https://ds604.neocities.org/DavidSarmaDotOrg_h12.png");
+	    background-repeat: no-repeat;
+	    width: 175px; 
+	    height: 1.5em; 
+	    position: fixed; 
+	    bottom: 0;
+	    right: 0;
+	    padding: 3px 5px 5px 5px;
+	    text-align: left;
+	    z-index: 200;
+	}
+
+	.sidenav {
+	  height: 100%;
+	  width: 100px;
+	  position: fixed;
+	  z-index: 1;
+	  top: 0;
+	  left: 0;
+	  background-color: #111;
+	  overflow-x: hidden;
+	  padding-top: 20px;
+	  opacity: 70%;
+	}
+
+	.sidenav a {
+	  padding: 6px 6px 6px 30px;
+	  text-decoration: none;
+	  font-size: 15px;
+	  color: #818181;
+	  display: block;
+	}
+
+	.sidenav a:hover {
+	  color: #f1f1f1;
+	}
+
+	main {
+	  margin-left: 130px; /* Same as the width of the sidenav */
+	}
+
+	@media screen and (max-height: 450px) {
+	  .sidenav {padding-top: 15px;}
+	  .sidenav a {font-size: 18px;}
+	}
+
+	/************** code blocks ***************/
+
+	pre.language-js {
+		padding: 1em;
+	}
+
+	code.language-js {
+		font-size: 13px;
+		display: block;
+		line-height: 1.35;
+	}
+	</style> 
+</head>
+<body>
+	<div class="sidenav">
+	 	<a href="/">Posts</a>
+	 	<a href="/pages">Pages</a>
+	 	<a href="/About">About</a>
+	</div>
+
+	<div class="main">
+		<header>
+			<!-- 			
+			<a href="/">Home</a>
+			<a href="/About">About</a> 
+			-->
+		</header>
+		<!-- <hr> -->
+		<main>
+			<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Flatland</title>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+		<link rel="stylesheet" href="https://ds604.neocities.org/js/latexTypeset/examples/flatland/flatland-single.css"/>
+        <style>
+            body {
+                background-color: #171717;
+            }
+            #typeset {
+                background-color: #000011;
+                color: lightgrey;
+            }
+            pre {
+                line-height: 1.3em;
+            }
+        </style>
+	</head>
+	<body>
+		<!--<div id="info">
+			<h1>TeX Hyphenation &amp; Justification on the Web</h1>
+			<p>This text has been set using <a href="http://www.bramstein.com/projects/typeset/">Typeset</a> as an implementation of the Knuth and Plass line breaking algorithm. Uses <a href="https://github.com/bramstein/Hypher/">Hypher</a> for hyphenation. Text and images are from <a href="http://books.google.com/books?vid=0PO8Zb8GuSvhGZx2&id=u8HOxy7lQYUC&printsec=titlepage">Edwin Abbott's Flatland</a>.</p>
+		</div>-->
+		<div id="typeset">
+			<div class="section">
+				<h1>Flatland.</h1>
+				<hr/>
+				<h3>PART I.</h3>
+				<h2>THIS WORLD.</h2>
+				<h3>§ I. — <span>Of the Nature of Flatland.</span></h3>
+
+                <p>I call our world Flatland, not because we call it so, but to make its nature clearer to you, my happy readers, who are privileged to live in Space.</p>
+
+                <pre>
+                    function main(){
+                        var foo = 123
+                        var bar = 456
+                        return foo + bar
+                    }
+                </pre>
+                <img src="https://ds604.neocities.org/Public/agamRodberg_thumb.png" />
+
+				<p>Imagine a vast sheet of paper on which straight Lines, Triangles, Squares, Pentagons, Hexagons, and other figures, instead of remaining fixed in their places, move freely about, on or in the surface, but without the power of rising above or sinking below it, very much like shadows — only hard and with luminous edges — and you will then have a pretty correct notion of my country and countrymen. Alas, a few years ago, I should have said "my universe;" but now my mind has been opened to higher views of things.</p>
+
+				<p>In such a country, you will perceive at once that it is impossible that there should be anything of what you call a "solid" kind; but I dare say you will suppose that we could at least distinguish by sight the Triangles, Squares, and other figures, moving about as I have described them. On the contrary, we could see nothing of the kind, not at least so as to distinguish one figure from another. Nothing was visible, nor could be visible, to us, except Straight Lines; and the necessity of this I will speedily demonstrate. Similar to Laplace of Gaussian, the image is first smoothed by convolution with Gaussian kernel of certain width $\sigma_{1}$:</p>
+\[
+G_{\sigma_{1}} (x,y) = \frac{1}{\sqrt{2\pi\sigma_{1}^2}} e^{-\frac{x^2 + y^2}{2\sigma_{1}^2}}
+\]
+
+                <p>Place a penny on the middle of one of your tables in Space; and leaning over it, look down upon it. It will appear a circle. When $a \ne 0$, there are two solutions to $\sqrt{ax^2 + bx}$ and they are</p>
+		$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
+        <p>Commutative Diagrams:</p>
+		$$
+        \newcommand{\ra}[1]{\kern-1.5ex\xrightarrow{\ \ #1\ \ }\phantom{}\kern-1.5ex}
+        \newcommand{\ras}[1]{\kern-1.5ex\xrightarrow{\ \ \smash{#1}\ \ }\phantom{}\kern-1.5ex}
+        \newcommand{\da}[1]{\bigg\downarrow\raise.5ex\rlap{\scriptstyle#1}}
+        \begin{array}{c}
+        0 & \ra{f_1} & A & \ra{f_2} & B & \ra{f_3} & C & \ra{f_4} & D & \ra{f_5} & 0 \\
+        \da{g_1} & & \da{g_2} & & \da{g_3} & & \da{g_4} & & \da{g_5} & & \da{g_6} \\
+        0 & \ras{h_1} & 0 & \ras{h_2} & E & \ras{h_3} & F & \ras{h_4} & 0 & \ras{h_5} & 0 \\
+        \end{array}
+        $$
+
+        <p>The DoG as an operator or convolution kernel is defined as:</p>
+        \[
+        DoG = G_{\sigma_{1}} - G_{\sigma_{2}} = \frac{1}{\sqrt{2\pi}} \left( \frac{1}{\sigma_{1}} e^{-\frac{x^2 + y^2}{2\sigma_{1}^2}} - \frac{1}{\sigma_{2}} e^{-\frac{x^2 + y^2}{2\sigma_{2}^2}} \right)
+        \]
+
+			</div>
+		</div>
+        <script type="text/javascript" src="https://ds604.neocities.org/js/latexTypeset/src/linked-list.js"></script>
+		<script type="text/javascript" src="https://ds604.neocities.org/js/latexTypeset/src/linebreak.js"></script>
+		<script type="text/javascript" src="https://ds604.neocities.org/js/latexTypeset/lib/hypher.js"></script>
+		<script type="text/javascript" src="https://ds604.neocities.org/js/latexTypeset/lib/en-us.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			jQuery(function ($) {
+				var lineLength = 0,
+					lineHeight = 0,
+					lineLengths = [],
+					tmp, ruler,
+                    h = new Hypher(Hypher.en),
+					cache = {};
+
+				var linebreak = Typeset.linebreak;
+
+				function measureString(str) {
+					if (!cache[str]) {
+						ruler[0].firstChild.nodeValue = str;
+						cache[str] = ruler[0].offsetWidth;
+					}
+					return cache[str];
+				}
+
+				lineLength = $('#typeset').width();
+
+				ruler = $('<div class="ruler">&nbsp;</div>').css({
+					visibility: 'hidden',
+					position: 'absolute',
+					top: '-8000px',
+					width: 'auto',
+					display: 'inline',
+					left: '-8000px'
+				});
+
+				$('body').append(ruler);
+
+				var	space = {
+						width: 0,
+						stretch: 0,
+						shrink: 0
+					},
+					hyphenWidth = measureString('-'),
+					hyphenPenalty = 100;
+
+				// Calculate the space widths based on our font preferences
+				space.width = ruler.html('&nbsp;').width();
+				space.stretch = (space.width * 3) / 6;
+				space.shrink = (space.width * 3) / 9;
+
+				lineHeight = parseFloat(ruler.html('Hello World').css('lineHeight'));
+
+				$('#typeset .section').each(function () {
+					$(this).find('p, img').each(function (index, element) {
+						var paragraph,
+							nodes = [],
+							breaks = [],
+							output = [],
+							lines = [],
+							words,
+							carryOver = null,
+							i, point, r, lineStart,
+							iterator,
+							token, hyphenated;
+
+						if (element.nodeName.toUpperCase() === 'P') {
+							paragraph = $(element);
+
+							if (index !== 0) {
+								nodes.push(linebreak.box(30, ''));
+							}
+
+							words = paragraph.text().split(/\s/);
+
+							words.forEach(function (word, index, array) {
+								var hyphenated = [];
+								if (word.length > 6) {
+									hyphenated = h.hyphenate(word, 'en');
+								}
+
+								if (hyphenated.length > 1) {
+									hyphenated.forEach(function (part, partIndex, partArray) {
+										nodes.push(linebreak.box(measureString(part), part));
+										if (partIndex !== partArray.length - 1) {
+											nodes.push(linebreak.penalty(hyphenWidth, hyphenPenalty, 1));
+										}
+									});
+								} else {
+									nodes.push(linebreak.box(measureString(word), word));
+								}
+
+								if (index === array.length - 1) {
+									nodes.push(linebreak.glue(0, linebreak.infinity, 0));
+									nodes.push(linebreak.penalty(0, -linebreak.infinity, 1));
+								} else {
+									nodes.push(linebreak.glue(space.width, space.stretch, space.shrink));
+								}
+							});
+
+							// Perform the line breaking
+							breaks = linebreak(nodes, lineLengths.length !== 0 ? lineLengths : [lineLength], {tolerance: 1});
+
+							// Try again with a higher tolerance if the line breaking failed.
+							if (breaks.length === 0) {
+								breaks = linebreak(nodes, lineLengths.length !== 0 ? lineLengths : [lineLength], {tolerance: 2});
+								// And again
+								if (breaks.length === 0) {
+									breaks = linebreak(nodes, lineLengths.length !== 0 ? lineLengths : [lineLength], {tolerance: 3});
+								}
+							}
+
+							// Build lines from the line breaks found.
+							for (i = 1; i < breaks.length; i += 1) {
+								point = breaks[i].position,
+								r = breaks[i].ratio;
+
+								for (var j = lineStart; j < nodes.length; j += 1) {
+									// After a line break, we skip any nodes unless they are boxes or forced breaks.
+									if (nodes[j].type === 'box' || (nodes[j].type === 'penalty' && nodes[j].penalty === -linebreak.infinity)) {
+										lineStart = j;
+										break;
+									}
+								}
+								lines.push({ratio: r, nodes: nodes.slice(lineStart, point + 1), position: point});
+								lineStart = point;
+							}
+
+							lines.forEach(function (line, lineIndex, lineArray) {
+								var	indent = false,
+									spaces = 0,
+									totalAdjustment = 0,
+									wordSpace = line.ratio * (line.ratio < 0 ? space.shrink : space.stretch),
+									integerWordSpace = Math.round(wordSpace),
+									adjustment = wordSpace - integerWordSpace,
+									integerAdjustment = adjustment < 0 ? Math.floor(adjustment) : Math.ceil(adjustment),
+									tmp = [];
+
+								// Iterate over the nodes in each line and build a temporary array containing just words, spaces, and soft-hyphens.
+								line.nodes.forEach(function (n, index, array) {
+									// normal boxes
+									if (n.type === 'box' && n.value !== '') {
+										if (tmp.length !== 0 && tmp[tmp.length - 1] !== '&nbsp;') {
+											tmp[tmp.length - 1] += n.value;
+										} else {
+											tmp.push(n.value);
+										}
+									// empty boxes (indentation for example)
+									} else if (n.type === 'box' && n.value === '') {
+										output.push('<span style="margin-left: 30px;"></span>');
+									// glue inside a line
+									} else if (n.type === 'glue' && index !== array.length - 1) {
+										tmp.push('&nbsp;');
+										spaces += 1;
+									// glue at the end of a line
+									} else if (n.type === 'glue') {
+										tmp.push(' ');
+									// hyphenated word at the end of a line
+									} else if (n.type === 'penalty' && n.penalty === hyphenPenalty && index === array.length - 1) {
+										tmp.push('&shy;');
+									// Remove trailing space at the end of a paragraph
+									} else if (n.type === 'penalty' && index === array.length - 1 && tmp[tmp.length - 1] === '&nbsp;') {
+										tmp.pop();
+									}
+								});
+
+								totalAdjustment = Math.round(adjustment * spaces);
+
+								// If the line ends at a soft hyphen we need to do something special as Webkit doesn't properly handle <span>hy&shy;</span><span>phen</span>.
+								if (tmp[tmp.length - 1] === '&shy;') {
+									if (totalAdjustment !== 0) {
+										output.push('<span style="word-spacing: ' + (integerWordSpace + integerAdjustment) + 'px;">' + (carryOver ? carryOver : '') + tmp.slice(0, Math.abs(totalAdjustment) * 2).join('') + '</span>');
+										output.push('<span style="word-spacing: ' + integerWordSpace + 'px;">' + tmp.slice((Math.abs(totalAdjustment) * 2), -2).join('') + '</span>');
+									} else {
+										output.push('<span style="word-spacing: ' + integerWordSpace + 'px;">' + (carryOver ? carryOver : '') + tmp.slice(0, -2).join('') + "</span>");
+									}
+									carryOver = tmp.slice(-2).join('');
+								} else {
+									if (totalAdjustment !== 0) {
+										output.push('<span style="word-spacing: ' + (integerWordSpace + integerAdjustment) + 'px;">' + (carryOver ? carryOver : '') + tmp.slice(0, Math.abs(totalAdjustment) * 2).join('') + '</span>');
+										output.push('<span style="word-spacing: ' + integerWordSpace + 'px;">' + tmp.slice(Math.abs(totalAdjustment) * 2).join('') + '</span>');
+									} else {
+										output.push('<span style="word-spacing: ' + integerWordSpace + 'px;">' + (carryOver ? carryOver : '') + tmp.join('') + "</span>");
+									}
+									carryOver = null;
+								}
+							});
+
+							paragraph.empty();
+							paragraph.append(output.join(''));
+							currentWidth = lineLength;
+
+							lineLengths = lineLengths.slice(lines.length);
+						} else {
+							tmp = (lineLength - $(element).outerWidth(true));
+							for (i = 0; i < Math.ceil($(element).outerHeight(true) / lineHeight); i += 1) {
+								lineLengths.push(tmp);
+							}
+							lineLengths.push(lineLength);
+						}
+					});
+				});
+			});
+		</script>
+
+	</body>
+</html>
+		</main>
+		<footer></footer>
+	</div>
+</body>
+</html>

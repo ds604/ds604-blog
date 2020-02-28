@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Eleventy Blog</title>
+	<script type="text/x-mathjax-config">
+    	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<link rel="stylesheet" href="https://ds604.neocities.org/js/latexTypeset/examples/flatland/flatland-single.css"/>
+	<link rel="stylesheet" href="/css/syntax.css" />
+	<style>
+	body {
+	 	/*font-family: "Lato", sans-serif;*/
+	 	font-family: "Minion Pro", Gentium, "Gentium Basic", "Hoefler Text", Constantia, "Palatino Linotype", Georgia, serif;
+	 	background-color: #171717;
+    	color: lightgray;
+	}
+
+	a {
+		color: lightblue;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #f1f1f1;
+	}
+
+	/*article {
+		line-height: 1.3em;
+	}*/
+
+	hr { 
+		height: 10px;
+		border: 0;
+		box-shadow: 0 1px 1px -1px #8c8b8b inset;
+		width: 50%;
+	}
+
+	footer { 
+		background-image: url("https://ds604.neocities.org/DavidSarmaDotOrg_h12.png");
+	    background-repeat: no-repeat;
+	    width: 175px; 
+	    height: 1.5em; 
+	    position: fixed; 
+	    bottom: 0;
+	    right: 0;
+	    padding: 3px 5px 5px 5px;
+	    text-align: left;
+	    z-index: 200;
+	}
+
+	.sidenav {
+	  height: 100%;
+	  width: 100px;
+	  position: fixed;
+	  z-index: 1;
+	  top: 0;
+	  left: 0;
+	  background-color: #111;
+	  overflow-x: hidden;
+	  padding-top: 20px;
+	  opacity: 70%;
+	}
+
+	.sidenav a {
+	  padding: 6px 6px 6px 30px;
+	  text-decoration: none;
+	  font-size: 15px;
+	  color: #818181;
+	  display: block;
+	}
+
+	.sidenav a:hover {
+	  color: #f1f1f1;
+	}
+
+	main {
+	  margin-left: 130px; /* Same as the width of the sidenav */
+	}
+
+	@media screen and (max-height: 450px) {
+	  .sidenav {padding-top: 15px;}
+	  .sidenav a {font-size: 18px;}
+	}
+
+	/************** code blocks ***************/
+
+	pre.language-js {
+		padding: 1em;
+	}
+
+	code.language-js {
+		font-size: 13px;
+		display: block;
+		line-height: 1.35;
+	}
+	</style> 
+</head>
+<body>
+	<div class="sidenav">
+	 	<a href="/">Posts</a>
+	 	<a href="/pages">Pages</a>
+	 	<a href="/About">About</a>
+	</div>
+
+	<div class="main">
+		<header>
+			<!-- 			
+			<a href="/">Home</a>
+			<a href="/About">About</a> 
+			-->
+		</header>
+		<!-- <hr> -->
+		<main>
+			<!-- 
+	<article>
+        <h1 style="display:inline-block; padding-right:1em;">
+            <a href="/pages/graphicsNeocities/">Graphics Neocities</a>
+        </h1>
+	</article>
+
+	<article>
+        <h1 style="display:inline-block; padding-right:1em;">
+            <a href="/pages/graphics2014/">Graphics 2014</a>
+        </h1>
+	</article>
+
+	<article>
+        <h1 style="display:inline-block; padding-right:1em;">
+            <a href="/pages/iframeDisplay/">IFrame display</a>
+        </h1>
+	</article>
+
+	<article>
+        <h1 style="display:inline-block; padding-right:1em;">
+            <a href="/pages/shadowRectangles/">Shadow Rectangles</a>
+        </h1>
+	</article>
+
+	<article>
+        <h1 style="display:inline-block; padding-right:1em;">
+            <a href="/pages/latexLayoutKatex_02162020/">LaTeX KaTeX</a>
+        </h1>
+	</article>
+
+	<article>
+        <h1 style="display:inline-block; padding-right:1em;">
+            <a href="/pages/cityOnFire_01092017/">City On Fire</a>
+        </h1>
+	</article>
+
+	<article>
+        <h1 style="display:inline-block; padding-right:1em;">
+            <a href="/pages/tufteDocument/">Tufte Document</a>
+        </h1>
+	</article>
+ -->
+
+<ul style="list-style-type:none;">
+    
+    <li style="line-height:1.5em">
+        <a href="/pages/graphicsNeocities/" style="">Graphics Neocities</a>
+    </li>
+    
+    <li style="line-height:1.5em">
+        <a href="/pages/graphics2014/" style="">Graphics 2014</a>
+    </li>
+    
+    <li style="line-height:1.5em">
+        <a href="/pages/iframeDisplay/" style="">IFrame display</a>
+    </li>
+    
+    <li style="line-height:1.5em">
+        <a href="/pages/shadowRectangles/" style="">Shadow Rectangles</a>
+    </li>
+    
+    <li style="line-height:1.5em">
+        <a href="/pages/latexLayoutKatex_02162020/" style="">LaTeX KaTeX</a>
+    </li>
+    
+    <li style="line-height:1.5em">
+        <a href="/pages/cityOnFire_01092017/" style="">City On Fire</a>
+    </li>
+    
+    <li style="line-height:1.5em">
+        <a href="/pages/tufteDocument/" style="">Tufte Document</a>
+    </li>
+    
+</ul>
+		</main>
+		<footer></footer>
+	</div>
+</body>
+</html>

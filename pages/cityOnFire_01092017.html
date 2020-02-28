@@ -1,0 +1,97 @@
+---
+layout: base-layout.njk
+title: City On Fire
+tags: ['page']
+---
+<html><body></body></html>
+
+<script>
+var Canvas = function(){
+	this.canvas = document.createElement('canvas');
+	
+	//set canvas options
+	this.canvas.id = "canvas";
+	this.canvas.width = window.innerWidth;
+	this.canvas.height = window.innerHeight;
+	this.canvas.style.position = "fixed";
+	this.canvas.style.left = "0em";
+	this.canvas.style.top = "0em";
+	this.canvas.style.backgroundColor = "black";
+	
+	//append canvas to body
+	var body = document.getElementsByTagName("body")[0];
+	body.appendChild(this.canvas);
+	
+	//get context reference
+	this.context = this.canvas.getContext('2d');
+}
+
+var canvasObject = new Canvas();
+var canvas = canvasObject.canvas;
+var c = canvasObject.context;
+//c.fillRect(0,0,200,200);
+//c.fillText("hello world", canvas.width/2, canvas.height/2);
+
+/*
+c.translate(0,canvas.height/2);
+	
+[...Array(100).keys()].map((d,i) => {
+	var x,y,
+		spacing = 1,
+		height = 10;
+	
+	x = i*spacing;
+	y = Math.sin(i)*height;
+	
+	//draw
+	//c.fillRect(x,y,10,10);
+	c.lineTo(x,y);
+});
+c.stroke();
+*/
+
+	/*
+var n = 11,
+	a = 0,
+	b = 100;
+var linspace = [...Array(n).keys()].map((d) => {
+	var increment = (b-a)/(n-1);
+	return d * increment + a;
+});*/
+//console.log(linspace);
+
+/*
+function linspace(a,b,n){
+	return [...Array(n).keys()].map((d) => {
+		var increment = (b-a)/(n-1);
+		return d * increment + a;
+	});
+}
+var foo = linspace(0,1,20);
+console.log(foo);
+*/
+
+c.shadowColor = "#000011";
+c.shadowOffsetX = -10;
+c.shadowOffsetY = -10;
+c.shadowBlur = 10;
+	
+var dataset = [...Array(canvas.width).keys()].map((d) => Math.random()*200);
+dataset.map((d,i) => {
+	var x = i*2,
+		y = 0,
+		barWidth = Math.random()*30 + 10,
+		barHeight = d * 5;
+	c.fillStyle = `rgb(${155},0,0)`;
+	c.fillRect(x,y,barWidth,barHeight);
+});
+
+
+var gradient = c.createLinearGradient(0,0,0,canvas.height);
+gradient.addColorStop(0,'black');
+gradient.addColorStop(1,'red');
+c.fillStyle = gradient;
+	
+c.globalCompositeOperation = 'lighter';
+c.fillRect(0,0,canvas.width,canvas.height);
+</script>

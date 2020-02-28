@@ -1,0 +1,23 @@
+---
+layout: base-layout.njk
+pagination:
+    data: collections.page
+    size: 10
+    reverse: true
+    alias: pages
+---
+<!-- {% for page in pages %}
+	<article>
+        <h1 style="display:inline-block; padding-right:1em;">
+            <a href="{{ page.url | url }}">{{ page.data.title }}</a>
+        </h1>
+	</article>
+{% endfor %} -->
+
+<ul style="list-style-type:none;">
+    {% for page in pages %}
+    <li style="line-height:1.5em">
+        <a href="{{ page.url | url }}" style="">{{ page.data.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
