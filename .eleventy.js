@@ -18,7 +18,8 @@ module.exports = function(eleventyConfig){
 	eleventyConfig.addPassthroughCopy("css");
 
 	return {
-		addPassthroughCopy: true
+		addPassthroughCopy: true,
+		pathPrefix: "/ds604-blog/_site/"
 	}
 }
 
