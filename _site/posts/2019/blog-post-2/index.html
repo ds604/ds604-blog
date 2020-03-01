@@ -96,13 +96,25 @@
 		display: block;
 		line-height: 1.35;
 	}
-	</style> 
+	</style>
+	<script>
+		function toggleVisibility(){
+			console.log('button clicked!')
+		  	if(htmlEditor.style.visibility == "visible"){
+		    	htmlEditor.style.visibility = "hidden"
+		  	} else {
+		    	htmlEditor.style.visibility = "visible"
+		    	htmlEditor.focus()
+		  	}
+		}
+	</script>
 </head>
 <body>
 	<div class="sidenav">
 	 	<a href="/ds604-blog/_site/">Posts</a>
 	 	<a href="/ds604-blog/_site/pages">Pages</a>
 	 	<a href="/ds604-blog/_site/About">About</a>
+	 	<button id="toggleEditorVisibility" type="button" style="padding:0.4em; border-radius: 5px; margin:0.8em" onclick="toggleVisibility()">Toggle Editor</button>
 	</div>
 
 	<div class="main">
@@ -114,9 +126,9 @@
 		</header>
 		<!-- <hr> -->
 		<main>
-			<article style="line-height: 1.3em; width:700px">
+			<article style="line-height: 1.3em; width:600px">
 	<h1>LaTeX and Code in Post Layout</h1>
-	<time datetime="2019-06-01T00:00:00.000Z">May 31, 2019</time>
+	<time datetime="2020-02-27T00:00:00.000Z">February 27, 2020</time>
 	<hr>
 	<!-- Excerpt Start -->
 <p>Now here are some interesting topics</p>
@@ -148,6 +160,7 @@ $$</p>
 
 </article>
 		</main>
+		<iframe id="htmlEditor" src="https://ds604.neocities.org/monacoHTMLEditor_04192019.html" style="visibility:hidden; position:fixed;top:0;right:0;width:50%;height:100%;opacity:80%;padding-left:0em;" />
 		<footer></footer>
 	</div>
 </body>

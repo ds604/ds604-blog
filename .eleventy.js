@@ -9,7 +9,7 @@ module.exports = function(eleventyConfig){
 	})
 
 	eleventyConfig.addFilter('dateReadable', date => {
-		return moment(date).format('LL')
+		return moment(date).utc().format('LL')
 	})
 
 	eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article))

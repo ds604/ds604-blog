@@ -1,7 +1,7 @@
 ---
 layout: post-layout.njk
 title: LaTeX and Code in Post Layout
-date: 2019-06-01
+date: 2020-02-27
 tags: ['post']
 ---
 <!-- Excerpt Start -->
@@ -45,4 +45,3 @@ The DoG as an operator or convolution kernel is defined as:
 $$
 DoG = G_{\sigma_{1}} - G_{\sigma_{2}} = \frac{1}{\sqrt{2\pi}} \left( \frac{1}{\sigma_{1}} e^{-\frac{x^2 + y^2}{2\sigma_{1}^2}} - \frac{1}{\sigma_{2}} e^{-\frac{x^2 + y^2}{2\sigma_{2}^2}} \right)
 $$
-
