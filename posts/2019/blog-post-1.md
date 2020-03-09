@@ -8,7 +8,7 @@ tags: ['post']
 A list of topics:
 <!-- Excerpt End -->
 
-- Fourier Transform
+- Fourier Transform 
 - Linear systems of equations
 	- LU decomposition
 	- QR decomposition
@@ -34,163 +34,64 @@ A list of topics:
 	- Stratified sampling
 	- Quasi-random (low discrepancy) sampling
 - Ordinary Differential Equations
+	- 123
+
+- Clustering
+	- PCA
+
+- Image Processing
+	- Deblur
+	- Seam carving
+	- Poisson image editing
+	- Upscaling
+	- Pixel to vector
+
+- Audio
+	- ICA
+
+<hr>
+
+Some Markdown text with <span style="color:red">some *red* text</span>.
 
 <style>
-body .gist .highlight {
-    background: #272822;
+table th:first-of-type {
+	width:10px;
 }
-body .gist .blob-num,
-body .gist .blob-code-inner,
-body .gist .pl-s2,
-body .gist .pl-stj {
-    color: #f8f8f2;
+table th:nth-of-type(2) {
+	width:50px;
 }
-body .gist .pl-c1 {
-    color: #ae81ff;
+table th:nth-of-type(3) {
+	width:50px;
 }
-body .gist .pl-enti {
-    color: #a6e22e;
-    font-weight: 700;
-}
-body .gist .pl-st {
-    color: #66d9ef;
-}
-body .gist .pl-mdr {
-    color: #66d9ef;
-    font-weight: 400;
-}
-body .gist .pl-ms1 {
-    background: #fd971f;
-}
-body .gist .pl-c,
-body .gist .pl-c span,
-body .gist .pl-pdc {
-    color: #75715e;
-    font-style: italic;
-}
-body .gist .pl-cce,
-body .gist .pl-cn,
-body .gist .pl-coc,
-body .gist .pl-enc,
-body .gist .pl-ens,
-body .gist .pl-kos,
-body .gist .pl-kou,
-body .gist .pl-mh .pl-pdh,
-body .gist .pl-mp,
-body .gist .pl-mp1 .pl-sf,
-body .gist .pl-mq,
-body .gist .pl-pde,
-body .gist .pl-pse,
-body .gist .pl-pse .pl-s2,
-body .gist .pl-mp .pl-s3,
-body .gist .pl-smi,
-body .gist .pl-stp,
-body .gist .pl-sv,
-body .gist .pl-v,
-body .gist .pl-vi,
-body .gist .pl-vpf,
-body .gist .pl-mri,
-body .gist .pl-va,
-body .gist .pl-vpu {
-    color: #66d9ef;
-}
-body .gist .pl-cos,
-body .gist .pl-ml,
-body .gist .pl-pds,
-body .gist .pl-s,
-body .gist .pl-s1,
-body .gist .pl-sol {
-    color: #e6db74;
-}
-body .gist .pl-e,
-body .gist .pl-ef,
-body .gist .pl-en,
-body .gist .pl-enf,
-body .gist .pl-enm,
-body .gist .pl-entc,
-body .gist .pl-entm,
-body .gist .pl-eoac,
-body .gist .pl-eoac .pl-pde,
-body .gist .pl-eoi,
-body .gist .pl-mai .pl-sf,
-body .gist .pl-mm,
-body .gist .pl-pdv,
-body .gist .pl-som,
-body .gist .pl-sr,
-body .gist .pl-vo {
-    color: #a6e22e;
-}
-body .gist .pl-ent,
-body .gist .pl-eoa,
-body .gist .pl-eoai,
-body .gist .pl-eoai .pl-pde,
-body .gist .pl-k,
-body .gist .pl-ko,
-body .gist .pl-kolp,
-body .gist .pl-mc,
-body .gist .pl-mr,
-body .gist .pl-ms,
-body .gist .pl-s3,
-body .gist .pl-smc,
-body .gist .pl-smp,
-body .gist .pl-sok,
-body .gist .pl-sra,
-body .gist .pl-src,
-body .gist .pl-sre {
-    color: #f92672;
-}
-body .gist .pl-mb,
-body .gist .pl-pdb {
-    color: #e6db74;
-    font-weight: 700;
-}
-body .gist .pl-mi,
-body .gist .pl-pdi {
-    color: #f92672;
-    font-style: italic;
-}
-body .gist .pl-pdc1,
-body .gist .pl-scp {
-    color: #ae81ff;
-}
-body .gist .pl-sc,
-body .gist .pl-sf,
-body .gist .pl-mo,
-body .gist .pl-entl {
-    color: #fd971f;
-}
-body .gist .pl-mi1,
-body .gist .pl-mdht {
-    color: #a6e22e;
-    background: rgba(0, 64, 0, .5);
-}
-body .gist .pl-md,
-body .gist .pl-mdhf {
-    color: #f92672;
-    background: rgba(64, 0, 0, .5);
-}
-body .gist .pl-mdh,
-body .gist .pl-mdi {
-    color: #a6e22e;
-    font-weight: 400;
-}
-body .gist .pl-ib,
-body .gist .pl-id,
-body .gist .pl-ii,
-body .gist .pl-iu {
-    background: #a6e22e;
-    color: #272822;
-}
-body .gist .gist-meta {
-  display: none;
-}
-body .gist .gist-data {
-	border: 0;
-}
-body .gist .gist-file {
-	border: 0;
+table th:nth-of-type(4) {
+	width:50px;
 }
 </style>
-<span style="position:fixed;top:0;right:0;width:55%;height:100%;background:#191b1d;opacity:80%;padding-left:0em;">
-<script src="https://gist.github.com/ds604/69f4174f1b0091facae7a443fc1abdac.js"></script>
-</span>
+| Topic	| JS | R | Python |
+|:-----:|:--:|:--:|:-----:|
+| FFT |   ✅ | ✅ |  ✅  |
+
+<style>
+.box {
+	display:inline-block; 
+	width:1.5em; 
+	height:1.5em; 
+	margin:1px 0; 
+	border:1px 
+	solid black; 
+	background-color: #008080; 
+	color:black; 
+	font-size:100%; 
+	text-align:center;
+}
+</style>
+<hr>
+
+hello world 
+	<a onclick="htmlEditor.src='https://ds604.neocities.org/monacoHTMLEditor_03062020.html?initText=PGgxPmhlbGxvIHdvcmxkPC9oMT4='" style="cursor:pointer">🔴</a>
+Fourier Transform
+	<a onclick="htmlEditor.src='https://ds604.neocities.org/monacoHTMLEditor_03062020.html?initText=PHNjcmlwdD4KLyogCiAqIENvbXB1dGVzIHRoZSBkaXNjcmV0ZSBGb3VyaWVyIHRyYW5zZm9ybSAoREZUKSBvZiB0aGUgZ2l2ZW4gY29tcGxleCB2ZWN0b3IuCiAqICdpbnJlYWwnIGFuZCAnaW5pbWFnJyBhcmUgZWFjaCBhbiBhcnJheSBvZiBuIGZsb2F0aW5nLXBvaW50IG51bWJlcnMuCiAqIFJldHVybnMgYW4gYXJyYXkgb2YgdHdvIGFycmF5cyAtIG91dHJlYWwgYW5kIG91dGltYWcsIGVhY2ggb2YgbGVuZ3RoIG4uCiAqLwpmdW5jdGlvbiBjb21wdXRlRGZ0KGlucmVhbCwgaW5pbWFnKSB7Cgl2YXIgbiA9IGlucmVhbC5sZW5ndGg7Cgl2YXIgb3V0cmVhbCA9IG5ldyBBcnJheShuKTsKCXZhciBvdXRpbWFnID0gbmV3IEFycmF5KG4pOwoJZm9yICh2YXIgayA9IDA7IGsgPCBuOyBrKyspIHsgIC8vIEZvciBlYWNoIG91dHB1dCBlbGVtZW50CgkJdmFyIHN1bXJlYWwgPSAwOwoJCXZhciBzdW1pbWFnID0gMDsKCQlmb3IgKHZhciB0ID0gMDsgdCA8IG47IHQrKykgeyAgLy8gRm9yIGVhY2ggaW5wdXQgZWxlbWVudAoJCQl2YXIgYW5nbGUgPSAyICogTWF0aC5QSSAqIHQgKiBrIC8gbjsKCQkJc3VtcmVhbCArPSAgaW5yZWFsW3RdICogTWF0aC5jb3MoYW5nbGUpICsgaW5pbWFnW3RdICogTWF0aC5zaW4oYW5nbGUpOwoJCQlzdW1pbWFnICs9IC1pbnJlYWxbdF0gKiBNYXRoLnNpbihhbmdsZSkgKyBpbmltYWdbdF0gKiBNYXRoLmNvcyhhbmdsZSk7CgkJfQoJCW91dHJlYWxba10gPSBzdW1yZWFsOwoJCW91dGltYWdba10gPSBzdW1pbWFnOwoJfQoJcmV0dXJuIFtvdXRyZWFsLCBvdXRpbWFnXTsKfQo8L3NjcmlwdD4='" style="cursor:pointer">🔴</a>
+
+✅❎
+
+<span class="box">&nbsp;</span>

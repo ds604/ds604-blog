@@ -1,0 +1,18 @@
+---
+layout: base-layout.njk
+title: Pan Zoom
+tags: ['page']
+---
+<body style="height:100%; color:lightgray">
+    <div id="lipsum" class='zoomable' 
+        style="width:400px; height:100%; position:absolute; display:flex; align-items:center; justify-content:center; left:20%;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam enim lectus, euismod ac metus eget, consequat aliquam augue. Fusce vestibulum sagittis massa, eget iaculis lorem malesuada ut. Curabitur fringilla a lectus sed suscipit. Sed mollis ligula blandit ipsum posuere, et luctus sem iaculis. Suspendisse scelerisque mollis dapibus. Sed elementum placerat lacus, ac rutrum mauris varius in. Sed malesuada, ipsum in facilisis facilisis, eros massa euismod odio, id pretium augue purus sed risus. Nulla vitae purus enim. Suspendisse placerat ac turpis sed tempor. Cras et vulputate eros. Aenean volutpat tincidunt erat eu aliquam. Sed vel ex pulvinar, rutrum velit at, ullamcorper nibh. Ut ac rhoncus nulla. Pellentesque eu orci eu libero semper commodo ac sit amet massa.
+    
+    </div>
+</body>
+
+<script src='https://unpkg.com/panzoom@8.7.3/dist/panzoom.min.js' query='#scene' name='pz'></script>
+<script>
+var area = document.querySelector('.zoomable')
+panzoom(area, {smoothScroll:false, zoomSpeed:0.2})
+</script>
