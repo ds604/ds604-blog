@@ -126,41 +126,36 @@
 		</header>
 		<!-- <hr> -->
 		<main>
-			<!-- 
-	<article>
-        <h1 style="display:inline-block; padding-right:1em;">
-            <a href="/ds604-blog/_site/pages/latexLayoutKatex_02162020/">LaTeX KaTeX</a>
-        </h1>
-	</article>
+			<body style="height:100%;">
+    <div id="lipsum" class='zoomable' 
+        style="height:100%; position:absolute; display:flex; align-items:center; justify-content:center;">
+    <p><a href="" style="white-space:nowrap">Lorem ipsum dolor sit amet,</a> consectetur adipiscing elit. Etiam enim lectus, euismod ac metus eget, consequat aliquam augue. Fusce vestibulum sagittis massa, eget iaculis lorem malesuada ut. Curabitur fringilla a lectus sed suscipit. Sed mollis ligula blandit ipsum posuere, et luctus sem iaculis. Suspendisse scelerisque mollis dapibus. Sed elementum placerat lacus, ac rutrum mauris varius in. Sed malesuada, ipsum in facilisis facilisis, eros massa euismod odio, id pretium augue purus sed risus. Nulla vitae purus enim. Suspendisse placerat ac turpis sed tempor. Cras et vulputate eros. Aenean volutpat tincidunt erat eu aliquam. Sed vel ex pulvinar, rutrum velit at, ullamcorper nibh. Ut ac rhoncus nulla. Pellentesque eu orci eu libero semper commodo ac sit amet massa.
+    </p>
+    <img src="https://ds604.neocities.org/img/2014-08-13_1407953452.jpg" style="zoom:30%"/>
+    <p>
+        Sed elementum placerat lacus, ac rutrum mauris varius in. Sed malesuada, ipsum in facilisis facilisis, eros massa euismod odio, id pretium augue purus sed risus. Nulla vitae purus enim. Suspendisse placerat ac turpis sed tempor. Cras et vulputate eros. Aenean volutpat tincidunt erat eu aliquam. Sed vel ex pulvinar, rutrum velit at, ullamcorper nibh. Ut ac rhoncus nulla. Pellentesque eu orci eu libero semper commodo ac sit amet massa.
+    </p>
+    <p>
+        Sed elementum placerat lacus, ac rutrum mauris varius in. Sed malesuada, ipsum in facilisis facilisis, eros massa euismod odio, id pretium augue purus sed risus. Nulla vitae purus enim. Suspendisse placerat ac turpis sed tempor. Cras et vulputate eros. Aenean volutpat tincidunt erat eu aliquam. Sed vel ex pulvinar, rutrum velit at, ullamcorper nibh. Ut ac rhoncus nulla. Pellentesque eu orci eu libero semper commodo ac sit amet massa.
+    </p>
+    <img src="https://ds604.neocities.org/img/2014-08-13_1407958366.jpg" style="zoom:30%"/>
+    </div>
+</body>
 
-	<article>
-        <h1 style="display:inline-block; padding-right:1em;">
-            <a href="/ds604-blog/_site/pages/cityOnFire_01092017/">City On Fire</a>
-        </h1>
-	</article>
-
-	<article>
-        <h1 style="display:inline-block; padding-right:1em;">
-            <a href="/ds604-blog/_site/pages/tufteDocument/">Tufte Document</a>
-        </h1>
-	</article>
- -->
-
-<ul style="list-style-type:none;">
-    
-    <li style="line-height:1.5em">
-        <a href="/ds604-blog/_site/pages/latexLayoutKatex_02162020/" style="">LaTeX KaTeX</a>
-    </li>
-    
-    <li style="line-height:1.5em">
-        <a href="/ds604-blog/_site/pages/cityOnFire_01092017/" style="">City On Fire</a>
-    </li>
-    
-    <li style="line-height:1.5em">
-        <a href="/ds604-blog/_site/pages/tufteDocument/" style="">Tufte Document</a>
-    </li>
-    
-</ul>
+<style>
+    p {
+        padding: 1em;
+        margin:1em;
+        color:lightgray;
+        background-color:#111;
+        border-radius:0.5em;
+    }
+</style>
+<script src='https://unpkg.com/panzoom@8.7.3/dist/panzoom.min.js' query='#scene' name='pz'></script>
+<script>
+var area = document.querySelector('.zoomable')
+panzoom(area, {smoothScroll:false, zoomSpeed:0.2})
+</script>
 		</main>
 		<footer></footer>
 		<img src="https://ds604.neocities.org/Public/dinosaur.png" style="position:fixed; bottom:3em; left:10em; zoom:10%; z-index:300">

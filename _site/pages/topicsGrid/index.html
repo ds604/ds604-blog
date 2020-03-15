@@ -126,41 +126,111 @@
 		</header>
 		<!-- <hr> -->
 		<main>
-			<!-- 
-	<article>
-        <h1 style="display:inline-block; padding-right:1em;">
-            <a href="/ds604-blog/_site/pages/latexLayoutKatex_02162020/">LaTeX KaTeX</a>
-        </h1>
-	</article>
+			<style>
+body {
+  margin: 20px;
+  background-color: #000011;
+}
 
-	<article>
-        <h1 style="display:inline-block; padding-right:1em;">
-            <a href="/ds604-blog/_site/pages/cityOnFire_01092017/">City On Fire</a>
-        </h1>
-	</article>
+.boxesWrapper {
+    display: grid;
+    grid-template-columns: 22em 22em;
+    grid-gap: 90px;
+}
 
-	<article>
-        <h1 style="display:inline-block; padding-right:1em;">
-            <a href="/ds604-blog/_site/pages/tufteDocument/">Tufte Document</a>
-        </h1>
-	</article>
- -->
+.boxes {
+  display: grid;
+  grid-template-columns: 90px 90px 90px 90px;
+  grid-gap: 10px;
+  background-color: #000011;
+  color: #444;
+  padding-left: 0px;
+}
 
-<ul style="list-style-type:none;">
-    
-    <li style="line-height:1.5em">
-        <a href="/ds604-blog/_site/pages/latexLayoutKatex_02162020/" style="">LaTeX KaTeX</a>
-    </li>
-    
-    <li style="line-height:1.5em">
-        <a href="/ds604-blog/_site/pages/cityOnFire_01092017/" style="">City On Fire</a>
-    </li>
-    
-    <li style="line-height:1.5em">
-        <a href="/ds604-blog/_site/pages/tufteDocument/" style="">Tufte Document</a>
-    </li>
-    
-</ul>
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius:2px;
+  padding: 10px;
+  font-size: 80%;
+  min-height: 2.5em;
+  min-width: 3em;
+}
+.box:hover {
+    filter: brightness(150%);
+}
+</style>
+
+<div class="boxesWrapper">
+    <div class="boxes">
+    <div class="box">QR</div>
+    <div class="box">Reduced QR</div>
+    <div class="box">SVD</div>
+    <div class="box">Reduced SVD</div>
+    <div class="box">LU</div>
+    <div class="box">Cholesky</div>
+    <div class="box">Eigenvalue</div>
+    <div class="box">Schur factorization</div>
+    <div class="box">Orthogonal projector</div>
+    <div class="box">Householder reflector</div>
+    <div class="box">QR algorithm</div>
+    <div class="box">Arnoldi iteration</div>
+    <div class="box">Lanczos iteration</div>
+    </div>
+
+    <div class="boxes">
+    <div class="box">Array</div>
+    <div class="box">List</div>
+    <div class="box">Stack</div>
+    <div class="box">Queue</div>
+    <div class="box">Linked List</div>
+    <div class="box">Dictionary</div>
+    <div class="box">Hash Table</div>
+    <div class="box">Set</div>
+    <div class="box">Binary Tree</div>
+    <div class="box">Graph</div>
+    <div class="box">Sorting</div>
+    <div class="box">Searching</div>
+    <div class="box">Dynamic Programming</div>
+    <div class="box">Greedy Algorithms</div>
+    </div>
+
+    <div class="boxes">
+    <div class="box">Binary Tree</div>
+    <div class="box">Sidewinder</div>
+    <div class="box">Dijkstra</div>
+    <div class="box">Aldous-Broder</div>
+    <div class="box">Wilson</div>
+    <div class="box">Hunt-and-Kill</div>
+    <div class="box">Recursive Backtracker</div>
+    <div class="box">Kruskal</div>
+    <div class="box">Prim</div>
+    <div class="box">Eller</div>
+    <div class="box">Recursive Division</div>
+    </div>
+
+    <div class="boxes">
+    <div class="box">Statistics</div>
+    <div class="box">Probability</div>
+    <div class="box">Hypothesis and Inference</div>
+    <div class="box">Gradient Descent</div>
+    <div class="box">Machine Learning</div>
+    <div class="box">k-Nearest Neighbors</div>
+    <div class="box">Naive Bayes</div>
+    <div class="box">Linear Regression</div>
+    <div class="box">Multiple Regression</div>
+    <div class="box">Logistic Regression</div>
+    <div class="box">Decision Trees</div>
+
+    <div class="box">Neural Networks</div>
+    <div class="box">Clustering</div>
+    <div class="box">NLP</div>
+    <div class="box">Network Analysis</div>
+    <div class="box">Recommender Systems</div>
+    <div class="box">Databases and SQL</div>
+    <div class="box">MapReduce</div>
+    </div>
+</div>
 		</main>
 		<footer></footer>
 		<img src="https://ds604.neocities.org/Public/dinosaur.png" style="position:fixed; bottom:3em; left:10em; zoom:10%; z-index:300">
