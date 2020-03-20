@@ -95,3 +95,31 @@ Fourier Transform
 ✅❎
 
 <span class="box">&nbsp;</span>
+
+<script> 
+function getRmdText(file, sectionTitle){
+	fetch(`./../../../content/${file}`)
+		.then(res => res.text())
+		.then(fullText => extractSectionText(fullText, sectionTitle))
+		.then(text => {
+			// text = text.replace(/`/g, "\\`")
+			let b64text = window.btoa(encodeURIComponent(text))
+			// console.log(b64text)
+			htmlEditor.src = `https://ds604.neocities.org/monacoHTMLEditor_03062020.html?initText=${b64text}`
+		})
+
+	////////////////////////////////////////
+	function extractSectionText(fullText, sectionTitle){
+		let sectionText = fullText.split("```")
+			.filter(d => d)
+			.filter(d => d.includes(sectionTitle))
+			.filter(d => d)[0]
+		sectionText = sectionText.substring(sectionText.indexOf("\n")+1) // get rid of first line
+		return sectionText
+	}
+}
+</script>
+<!-- <script src="./../../../js/util.js"></script> -->
+Get text from Rmd file:
+<button onclick="getRmdText('testCode.Rmd', 'get folders recursive')">get folders recursive</button>
+<button onclick="getRmdText('testCode.Rmd', 'fourier transform')">fourier transform</button>

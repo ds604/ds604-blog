@@ -43,6 +43,7 @@ List of Books:
 	<li>Seven Languages in Seven Weeks</li>
 	<li>Optimization for Computer Vision</li>
 	<li>Numerical Linear Algebra</li>
+	<li>A Common-Sense Guide to Data Structures and Algorithms</li>
 </ul>
 
 <style>

@@ -1,0 +1,122 @@
+---
+layout: base-layout.njk
+title: Print Folders Recursive - Node.js
+tags: ['page']
+---
+<style>
+   pre {
+      background-color:#000011;
+      padding:1em;
+      border-radius:5px;
+      width:1000px;
+   }
+   pre.res {
+      background-color:#000022;
+   }
+</style>
+
+print folders and subfolders
+<pre style="">
+const fs = require('fs')
+
+function listDirectories(path){
+  fs.readdirSync(path, {withFileTypes:true})
+    .filter(d => d.isDirectory() && (d.name != '.git') && (d.name != 'node_modules'))
+    .map(d => {
+      console.log(`${path}/${d.name}`)
+      
+      listDirectories(`${path}/${d.name}`)
+    })
+}
+  
+console.log(listDirectories('/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog'))
+</pre>
+<pre class="res">
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_includes
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/About
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/_eleventy_redirect
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/css
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/1
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/cityOnFire_01092017
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/draggableDivs
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/embedGist
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/graphics2014
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/graphicsNeocities
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/htmlEditorURLText
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/iframeDisplay
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/latexLayoutKatex_02162020
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/panZoom
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/panZoomTextImages
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/shadowRectangles
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/topicsGrid
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/tufteDocument
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/posts
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/posts/2019
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/posts/2019/blog-post-1
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/posts/2019/blog-post-2
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/posts/2019/listOfBooks
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/content
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/css
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/pages
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/posts
+/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/posts/2019
+undefined
+</pre>
+
+return folders and subfolders
+<pre>
+const fs = require('fs')
+
+function getDirectories(path){
+  let list = []
+  listDirectories(path)
+  return list
+  
+  /////////////////////////////////
+  function listDirectories(path){
+    fs.readdirSync(path, {withFileTypes:true})
+      .filter(d => d.isDirectory() && (d.name != '.git') && (d.name != 'node_modules'))
+      .map(d => {
+        list.push(`${path}/${d.name}`)
+        
+        listDirectories(`${path}/${d.name}`)
+      })
+  }
+}
+  
+console.log(getDirectories('/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog'))
+</pre>
+<pre class="res">
+   [ '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_includes',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/About',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/_eleventy_redirect',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/css',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/1',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/cityOnFire_01092017',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/draggableDivs',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/embedGist',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/graphics2014',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/graphicsNeocities',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/htmlEditorURLText',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/iframeDisplay',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/latexLayoutKatex_02162020',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/panZoom',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/panZoomTextImages',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/shadowRectangles',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/topicsGrid',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/pages/tufteDocument',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/posts',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/posts/2019',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/posts/2019/blog-post-1',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/posts/2019/blog-post-2',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/_site/posts/2019/listOfBooks',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/content',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/css',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/pages',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/posts',
+  '/Users/davidsarmaholdings/Dropbox/DS/notebooks/ds604-blog/posts/2019' ]
+</pre>
